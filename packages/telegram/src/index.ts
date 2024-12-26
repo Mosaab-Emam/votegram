@@ -11,6 +11,10 @@ if (!process.env.BOT_TOKEN) {
 const bot = new Bot(process.env.BOT_TOKEN);
 
 bot.command("start", (ctx) => ctx.reply("Welcome! Up and running."));
-bot.on("message", (ctx) => ctx.reply("Got another message!"));
+bot.on("message", (ctx) => {
+  const userId = ctx.message.from.id;
+  console.log(userId);
+  ctx.reply("Got another message!");
+});
 
 bot.start();
