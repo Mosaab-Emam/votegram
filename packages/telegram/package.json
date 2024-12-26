@@ -3,10 +3,15 @@
   "type": "module",
   "scripts": {
     "dev": "tsc --watch",
-    "build": "tsc"
+    "build": "tsc",
+    "start": "node dist/index.js"
   },
   "devDependencies": {
     "@repo/typescript-config": "*",
     "typescript": "latest"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "grammy": "^1.33.0"
   }
 }
